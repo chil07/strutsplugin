@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.2"?>
+<plugin>
+   <extension
+         point="org.eclipse.ui.actionSets">
+      <actionSet
+            id="sample.open"
+            label="Open Java Type by Author"
+            visible="true">
+         <action
+               class="sample.actions.OpenJavaTypeByAuthorAction"
+               definitionId="sample.openJavaByAuthor"
+               icon="icons/change.gif"
+               id="sample.openJavaByAuthor"
+               label="Open Java Type by Author"
+               menubarPath="navigate/open.ext2"
+               toolbarPath="org.eclipse.search.searchActionSet/Search">
+         </action>
+      </actionSet>
+   </extension>
+   <extension
+         point="org.eclipse.ui.commands">
+      <command
+            categoryId="org.eclipse.ui.category.navigate"
+            description="Open Java by Author"
+            id="sample.openJavaByAuthor"
+            name="Open Java by Author">
+      </command>
+   </extension>
+   <extension
+         point="org.eclipse.ui.bindings">
+      <key
+            commandId="sample.openJavaByAuthor"
+            sequence="M1+M2+V" 
+			schemeId="org.eclipse.ui.defaultAcceleratorConfiguration">
+      </key>
+   </extension>
+
+</plugin>
